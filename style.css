@@ -1,0 +1,152 @@
+style.css
+/* Основные настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(45deg, #4A306D, #5E43A3);
+    color: white;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s;
+}
+
+/* Блок профиля */
+.profile {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s 0.3s backwards;
+}
+
+.photo {
+    flex: 1;
+    min-width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.photo:hover {
+    transform: translateY(-5px);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Секция "Обо мне" */
+.about {
+    flex: 2;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Навыки */
+.skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.skill-tag {
+    background: #7E57C2;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.95em;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: #673AB7;
+    transform: translateY(-2px);
+}
+
+/* Контакты */
+.contacts {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s 0.5s backwards;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.contact-item:hover {
+    background: #f8f5ff;
+}
+
+.contact-item i {
+    font-size: 1.2em;
+    width: 35px;
+    color: #7E57C2;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+    }
+    .photo {
+        min-width: 100%;
+    }
+}
